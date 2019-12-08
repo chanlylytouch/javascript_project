@@ -10,31 +10,40 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-3">
         <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <select name="menu" id="menuBar" class="form-control text-center">
-                    <option value="Nom Pom">Nom Pom</option>
-                    <option value="Chocolate cake">Chocolate cake</option>
-                    <option value="Avocado Shake(Toek KaLok)">Avocado Shake(Toek KaLok)</option>
+            <div class="col-4"></div>
+            <div class="col-4">
+                <select name="menu" id="chooseMe" class="form-control text-center">
+                    <option value="" disabled selected>Choose Recipe</option>
+                    <option value="0">Avocado Shake(Toek KaLok)</option>
+                    <option value="1">French creps</option>
                 </select>
             </div>
-            <div class="col-3"></div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4" id="disaplay"></div>
             <div class="col-4"></div>
         </div>
     </div>
-    <div class="container">
-        <div class="row" id="result">
+    <div class="container mt-4">
+        <div class="row" id="result"></div>
+        <div class="row mt-4">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-borderless" id="result1"></table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-borderless" id="result2"></table>
+                    </div>
+                </div>
+            </div>
             
         </div>
     </div>
+    <h1>h1</h1>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/json.js"></script>
 </body>
