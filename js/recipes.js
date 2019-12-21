@@ -19,6 +19,7 @@ $(document).ready(function () {
 });
 
 // get number guest 
+$('#choose').hide();
 function getNubGuest(nubGuest) {
     var choose = "";
     choose += `
@@ -27,7 +28,6 @@ function getNubGuest(nubGuest) {
     $('#input').html(choose);
     $('#choose').show();
 }
-$('#choose').hide();
 // get link url
 function getUrl() {
     var url = "https://raw.githubusercontent.com/radytrainer/test-api/master/test.json";
@@ -75,7 +75,7 @@ function getAllRecipes(getName, getIcon) {
     result += `
             <div class="col-3"></div>
             <div class="col-3"><h3>${getName}</h3></div>
-            <div class="col-3"><img src="${getIcon}" width="150"></div>
+            <div class="col-3"><img src="${getIcon}" width="200" class="img-thumbnail"></div>
             <div class="col-3"></div>
             `;
     $('#result').html(result);
@@ -86,7 +86,7 @@ function getIngredient(ingredient) {
     ingredient.forEach(item => {
         result1 += `
             <tr>
-                <td><img src="${item.iconUrl}" width="50"></td>
+                <td><img src="${item.iconUrl}" width="70" class="img-thumbnail"></td>
                 <td id="quantity">${item.quantity}</td>
                 <td>${item.unit[0]}</td>
                 <td>${item.name}</td>
@@ -139,7 +139,7 @@ function compute(guest) {
         newQuantity = quantity * guest ;
         result1 += `
             <tr>
-                <td><img src="${item.iconUrl}" width="50"></td>
+                <td><img src="${item.iconUrl}" width="70" class="img-thumbnail"></td>
                 <td id="quantity">${newQuantity}</td>
                 <td>${item.unit[0]}</td>
                 <td>${item.name}</td>
