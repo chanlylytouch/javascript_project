@@ -1,4 +1,17 @@
 $(document).ready(function () {
+    //carosel in menu
+    $(document).ready(function () {
+        var instance = M.Carousel.init({
+            fullWidth: true,
+            indicators: true
+        });
+
+        $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true,
+        });
+    })
+    // get value from select box
     getData();
     $('#recipe').on('change', function () {
         var chooseRecips = $('#recipe').val();
@@ -88,8 +101,8 @@ function getIngredient(ingredient) {
             <tr>
                 <td><img src="${item.iconUrl}" width="70" class="img-thumbnail"></td>
                 <td id="quantity">${item.quantity}</td>
-                <td>${item.unit[0]}</td>
-                <td>${item.name}</td>
+                <td class="text-light">${item.unit[0]}</td>
+                <td class="text-light">${item.name}</td>
             </tr>
         `;
     });
@@ -108,7 +121,7 @@ function getInstruction(instruction) {
                 <p>${splitStep[i]}</p>
             `
     }
-    $('#table1').html(result);
+    $('#step').html(result);
     $('#instruction').html('Instructions');
 }
 
@@ -141,8 +154,8 @@ function compute(guest) {
             <tr>
                 <td><img src="${item.iconUrl}" width="70" class="img-thumbnail"></td>
                 <td id="quantity">${newQuantity}</td>
-                <td>${item.unit[0]}</td>
-                <td>${item.name}</td>
+                <td class="text-light">${item.unit[0]}</td>
+                <td class="text-light">${item.name}</td>
             </tr>
         `;
     });

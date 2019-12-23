@@ -7,10 +7,86 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Select box</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    
-</head>
 
+</head>
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <img class="img-thumbnail" src="https://im.haberturk.com/2019/12/02/ver1575365419/2545370_1024x576.jpg" style="height: 400px;
+                width: 100%;" class="img-center">
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="text-primary">Avocado Shake (Toek KaLok)</h3>
+                <p class="text-primary">We had such a great time to drink Avocado!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <img class="img-thumbnail" src="https://floridastrawberry.org/wp-content/uploads/2013/06/Strawberry-and-Cream-French-Crepe-Recipe.jpg"
+                        style="height: 400px;
+                            width: 100%;">
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="text-primary">French creps</h3>
+                <p class="text-primary">Very great to cook french creps!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <img class="img-thumbnail" src="https://www.makeitgrateful.com/wp-content/uploads/2019/02/how-to-make-perfect-hardboiled-eggs.jpg" style="height: 400px; width: 100%;">
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="text-primary">Chean Saom with eggs</h3>
+                <p class="text-primary">We love eggs and eat it every weekend!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <img src="https://www.sooperchef.pk/wp-content/uploads/2016/09/Lahori-Fried-Fish-recipe-1.jpg"
+                        style="height: 400px; width: 100%;" class="img-thumbnail">
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="text-primary">Fry Fish</h3>
+                <p class="text-primary">Good healthy if you eat fish!!</p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
 
 <body>
     <div class="container mt-3">
@@ -32,33 +108,38 @@
         <div class="row mt-3" id="choose">
             <div class="col-3"></div>
             <div class="col-3">
-                <p>Number of Persons</p>
+                <h3>Number of Persons</h3>
             </div>
             <div class="col-3">
                 <div class="input-group mb-3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-primary" id="decrease" type="submit">-</button>
+                        <button class="btn btn-primary" id="decrease" type="submit">-</button>
                         <div id="input"></div>
-                        <button class="btn btn-outline-primary" id="increase" type="submit">+</button>
+                        <button class="btn btn-primary" id="increase" type="submit">+</button>
                     </div>
                 </div>
             </div>
             <div class="col-3"></div>
         </div>
-        <div class="row mt-4">          
-            <div class="col-5">
+        <div class="row mt-4">
+            <div class="col-6">
+                <!-- <div class="card bg-primary"> -->
                 <h4 id="ingredient" class="text-center"></h4>
                 <table class="table table-borderless" id="table"></table>
+                <!-- </div> -->
             </div>
-            <div class="col-2" id="ruler"></div>
-            <div class="col-5">
+            <!-- <div class="col-2" id="ruler"></div> -->
+            <div class="col-6">
+                <!-- <div class="card"> -->
                 <h4 id="instruction" class="text-center"></h4>
-                <table class="table table-borderless" id="table1"></table>
+                <div class="step" id="step">
+                    </table>
+                    <!-- </div> -->
+                </div>
             </div>
         </div>
-    </div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/recipes.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/recipes.js"></script>
 </body>
 
 </html>
