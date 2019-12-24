@@ -33,6 +33,7 @@ $(document).ready(function () {
 
 // get number guest 
 $('#choose').hide();
+$('#card').hide();
 function getNubGuest(nubGuest) {
     var choose = "";
     choose += `
@@ -40,6 +41,7 @@ function getNubGuest(nubGuest) {
         `;
     $('#input').html(choose);
     $('#choose').show();
+    $('#card').show();
 }
 // get link url
 function getUrl() {
@@ -101,8 +103,8 @@ function getIngredient(ingredient) {
             <tr>
                 <td><img src="${item.iconUrl}" width="70" class="img-thumbnail"></td>
                 <td id="quantity">${item.quantity}</td>
-                <td class="text-light">${item.unit[0]}</td>
-                <td class="text-light">${item.name}</td>
+                <td>${item.unit[0]}</td>
+                <td>${item.name}</td>
             </tr>
         `;
     });
@@ -154,8 +156,8 @@ function compute(guest) {
             <tr>
                 <td><img src="${item.iconUrl}" width="70" class="img-thumbnail"></td>
                 <td id="quantity">${newQuantity}</td>
-                <td class="text-light">${item.unit[0]}</td>
-                <td class="text-light">${item.name}</td>
+                <td>${item.unit[0]}</td>
+                <td>${item.name}</td>
             </tr>
         `;
     });
